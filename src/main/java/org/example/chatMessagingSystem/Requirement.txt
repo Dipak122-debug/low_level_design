@@ -1,0 +1,55 @@
+
+Functional Requirements
+1.One-to-one chat
+2.Group chat
+3.Send message
+4.Receive message
+
+Enums
+Message status
+SENT
+DELIVERED
+READ
+
+Online/Offline users
+Store chat history
+Attachments (future)
+
+NFR
+1. low latency
+2. reliable
+3. scalable
+4. message should never be lost
+5. message should be in order
+
+
+Core Entities
+Enums
+1. MessageStatus(SENT,DELIVERED,READ)
+2. UserStatus(ONLINE,OFFLINE)
+3.
+
+Class
+1. User
+2. Message
+3. Conversation
+4. ChatServer
+5. NotificationService
+6. MessageFactory
+
+
+USER A --> send message --> ChatServer(validates & Save) --> MessageFactory -->  NotificationService --> USER B
+
+
+
+1. Chatserver --> singleTone
+
+2. Factory pattern for message creation
+MessageFactory.createText()
+
+MessageFactory.createImage()
+
+MessageFactory.createVideo()
+
+3. Observer pattern for notification service
+4. Strategy pattern for message delivery (push, pull, etc.)
