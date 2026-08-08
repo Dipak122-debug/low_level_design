@@ -1,0 +1,60 @@
+Enum
+-splitType(EQUAL, PERCENTAGE, EXACT)
+
+
+User
+- id
+- name
+- email
+
+Group
+- id
+- name
+- members (List<User>)
+- expenses (List<Expense>)
+
+Split
+- id
+- user (User)
+- amount
+- percentage (optional, for percentage split)
+
+Expense
+- id
+- amount
+- description
+- paidBy (User)
+- splitType (Enum)
+- splits (List<Split>)
+
+
+- BalanceSheet
+- id
+- user (User)
+- balances (Map<User, Double>)
+- addBalance(User user, double amount)
+- getBalance(User user): double
+- setBalance(User user, double amount)
+- showBalances(): Map<User, Double>
+- showBalanceWithUser(User user): double
+
+SplitwiseService
+- users (List<User>)
+- groups (List<Group>)
+- balanceSheets (Map<User, BalanceSheet>)
+- addUser(User user)
+- createGroup(String name, List<User> members): Group
+- addExpense(Group group, Expense expense)
+- getBalanceSheet(User user): BalanceSheet
+- getBalanceWithUser(User user1, User user2): double
+- showBalances(User user): Map<User, Double>
+- showBalanceWithUser(User user1, User user2): double
+- settleUp(User user1, User user2): void // Settle up debts between two users
+
+
+
+
+
+
+
+
