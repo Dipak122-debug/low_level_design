@@ -1,9 +1,14 @@
 package org.example.NotificationManager;
 
-class PushNotification implements Notification {
+public class PushNotification extends NotificationChannel {
+
+    public PushNotification() {
+        super(NotificationType.PUSH);
+    }
 
     @Override
     public void sendNotification(String message, String recipient) {
-        System.out.println("Sending push notification to " + recipient + " with message: " + message);
+        // In a real system, integrate with push notification providers (FCM, APNs)
+        System.out.println("[PUSH] Sending push notification to " + recipient + " with message: " + message);
     }
 }

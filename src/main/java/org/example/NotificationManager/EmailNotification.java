@@ -1,11 +1,14 @@
 package org.example.NotificationManager;
 
+public class EmailNotification extends NotificationChannel {
 
-
-class EmailNotification implements Notification {
+    public EmailNotification() {
+        super(NotificationType.EMAIL);
+    }
 
     @Override
     public void sendNotification(String message, String recipient) {
-        System.out.println("Sending email to " + recipient + " with message: " + message);
+        // In a real system, integrate with an SMTP provider or email gateway
+        System.out.println("[EMAIL] Sending email to " + recipient + " with message: " + message);
     }
 }
