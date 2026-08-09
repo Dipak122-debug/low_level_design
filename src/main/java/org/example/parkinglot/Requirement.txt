@@ -1,0 +1,35 @@
+Requirements for the Parking Lot System:
+
+- The system should allow users to park and unpark their vehicles in a parking lot.
+- The system should allow different types of vehicle and Fees strategy for each type of vehicle.
+- The system should be able to handle multiple parking lots and manage their availability.
+- The system should support different types of parking spaces (e.g., compact, regular, large) and assign vehicles to appropriate spaces based on their size.
+- The system should provide a way to check the availability of parking spaces in real-time.
+
+
+Enum
+VehicleType {
+    MOTORCYCLE,
+    TRUCK
+}
+
+VehicleSize {
+    SMALL,
+    MEDIUM,
+    LARGE
+}
+
+class
+
+1. ParkingLot
+2. ParkingFloor
+3. ParkingSpot
+4. Ticket
+5. Vehicle(Abstract Class)
+- Car
+- Motorcycle
+- Truck
+
+PaymentStrategy
+- HourlyPaymentStrategy
+- FlatRatePaymentStrategy
