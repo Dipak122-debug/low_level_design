@@ -1,4 +1,4 @@
-package org.example.DesignpatternsNotes.Observer.interfaces;
+package org.example.DesignpatternsNotes.behavioural.observer.interfaces;
 
 public interface Subject {
     void addObserver(Observer o);

@@ -1,7 +1,7 @@
-package org.example.DesignpatternsNotes.Observer;
+package org.example.DesignpatternsNotes.behavioural.observer;
 
-import org.example.DesignpatternsNotes.Observer.models.NewsAgency;
-import org.example.DesignpatternsNotes.Observer.models.NewsChannel;
+import org.example.DesignpatternsNotes.behavioural.observer.models.NewsAgency;
+import org.example.DesignpatternsNotes.behavioural.observer.models.NewsChannel;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package org.example.DesignpatternsNotes.Observer.models;
+package org.example.DesignpatternsNotes.behavioural.observer.models;
 
-import org.example.DesignpatternsNotes.Observer.interfaces.Observer;
+import org.example.DesignpatternsNotes.behavioural.observer.interfaces.Observer;
 
 public class NewsChannel implements Observer {
     private final String channelName;

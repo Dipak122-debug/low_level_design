@@ -1,9 +1,9 @@
-package org.example.DesignpatternsNotes.Observer.models;
+package org.example.DesignpatternsNotes.behavioural.observer.models;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.example.DesignpatternsNotes.Observer.interfaces.Observer;
-import org.example.DesignpatternsNotes.Observer.interfaces.Subject;
+import org.example.DesignpatternsNotes.behavioural.observer.interfaces.Observer;
+import org.example.DesignpatternsNotes.behavioural.observer.interfaces.Subject;
 
 public class NewsAgency implements Subject {
     private final List<Observer> observers = new ArrayList<>();

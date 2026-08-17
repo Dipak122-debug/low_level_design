@@ -1,4 +1,4 @@
-package org.example.DesignpatternsNotes.Builder;
+package org.example.DesignpatternsNotes.creational.builder;
 
 public class Main {
     public static void main(String[] args) {
