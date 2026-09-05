@@ -1,6 +1,5 @@
 package org.example.chatMessagingSystem;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import org.example.chatMessagingSystem.enums.MessageType;
 import org.example.chatMessagingSystem.enums.UserStatus;

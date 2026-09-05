@@ -1,0 +1,32 @@
+Rate Limiter
+
+Rate limiter has multiple strategies
+
+1. Fixed Window
+ - Divide time into fixed intervals.
+
+Limit = 5 requests
+Window = 1 minute
+
+10:00:00                  10:01:00
+    |-------------------------|
+           Window 1
+
+10:01:00                  10:02:00
+    |-------------------------|
+           Window 2
+
+user1 → count = 3
+user2 → count = 5
+user3 → count = 1
+
+2. Sliding window
+ - sliding window log
+
+Limit = 5
+Window = 60 seconds
+
+user1 → [timestamp1, timestamp2, timestamp3...]
+
+
+
