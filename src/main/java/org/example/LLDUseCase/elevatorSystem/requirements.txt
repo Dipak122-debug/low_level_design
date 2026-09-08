@@ -1,0 +1,24 @@
+Design an Elevator System that can handle multiple elevators in a building. The system should be able to manage elevator requests from different floors, prioritize requests based on the current position and direction of the elevators, and ensure efficient operation of the elevators.
+
+Requirements for the Elevator System:
+1. The system should allow users to request an elevator from any floor.
+2. The system should allow users to select a destination floor once inside the elevator.
+3. The system should manage multiple elevators and their current positions.
+4. The system should prioritize elevator requests based on the current position and direction of the elevators.
+5. The system should ensure efficient operation of the elevators, minimizing wait times and travel times.
+
+Classes
+1. ElevatorSystem - This class will manage the overall operation of the elevator system, including handling requests and coordinating the elevators.
+2. ElevatorController - This class will manage the individual elevators, including their current positions, directions, and handling requests.
+3. Elevator - This class will represent an individual elevator, including its current floor, direction, and door status.
+4. ElevatorRequest - This class will represent a request for an elevator, including the source floor and destination floor.
+5. Door - This class will represent the door of an elevator, including its open/close status.
+
+Strategies
+1. ElevatorSelectionStrategy - This interface will define the strategy for handling elevator requests, allowing for different implementations based on the current state of the elevators.
+2. NearestElevatorStrategy - This class will implement the ElevatorSelectionStrategy interface, selecting the nearest available elevator to handle a request.
+
+Enums
+1. Direction(UP, DOWN, IDLE) - This enum will represent the direction of an elevator.
+2. ElevatorState(IDLE, MOVING, DOOR_OPEN) - This enum will represent the state of an elevator.
+3. DoorState(OPEN, CLOSED) - This enum will represent the state of an elevator door.
