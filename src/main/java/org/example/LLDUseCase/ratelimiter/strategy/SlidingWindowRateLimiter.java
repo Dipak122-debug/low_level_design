@@ -5,6 +5,12 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * Sliding Window Rate Limiter implementation.
+ * This strategy allows a maximum number of requests within a specified time window.
+ * It maintains a deque of timestamps for each user and removes timestamps that fall outside the window.
+ */
+
 public class SlidingWindowRateLimiter implements RateLimiterStrategy{
 
     private final int maxRequests;
