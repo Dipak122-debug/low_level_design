@@ -20,7 +20,7 @@ public class ParkingFloor {
         parkingSpots.add(spot);
     }
 
-    public Optional<ParkingSpot> findAvailableSport(Vehicle vehicle){
+    public Optional<ParkingSpot> findAvailableSpot(Vehicle vehicle){
 
         return parkingSpots.stream()
                 .filter(spot -> !spot.isOccupied() && spot.canFitVehicle(vehicle))

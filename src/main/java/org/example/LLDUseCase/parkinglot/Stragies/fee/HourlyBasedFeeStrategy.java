@@ -1,4 +1,4 @@
-package org.example.LLDUseCase.parkinglot.Stragies;
+package org.example.LLDUseCase.parkinglot.Stragies.fee;
 import java.util.Map;
 import org.example.LLDUseCase.parkinglot.enums.VehicleType;
 import org.example.LLDUseCase.parkinglot.models.Ticket;

@@ -1,8 +1,8 @@
-package org.example.LLDUseCase.parkinglot.Stragies;
+package org.example.LLDUseCase.parkinglot.Stragies.fee;
 
 import org.example.LLDUseCase.parkinglot.models.Ticket;
 
-public class FlatRatePaymentStrategy implements FeeStrategy{
+public class FlatRatePaymentStrategy implements FeeStrategy {
 
     @Override
     public double calculateFee(Ticket ticket){

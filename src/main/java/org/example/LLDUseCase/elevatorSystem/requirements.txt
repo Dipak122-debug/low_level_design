@@ -14,11 +14,48 @@ Classes
 4. ElevatorRequest - This class will represent a request for an elevator, including the source floor and destination floor.
 5. Door - This class will represent the door of an elevator, including its open/close status.
 
+
 Strategies
 1. ElevatorSelectionStrategy - This interface will define the strategy for handling elevator requests, allowing for different implementations based on the current state of the elevators.
 2. NearestElevatorStrategy - This class will implement the ElevatorSelectionStrategy interface, selecting the nearest available elevator to handle a request.
 
 Enums
 1. Direction(UP, DOWN, IDLE) - This enum will represent the direction of an elevator.
-2. ElevatorState(IDLE, MOVING, DOOR_OPEN) - This enum will represent the state of an elevator.
+2. RequestSource(INTERNAL, EXTERNAL) - This enum will represent the source of an elevator request.
 3. DoorState(OPEN, CLOSED) - This enum will represent the state of an elevator door.
+
+We can use state pattern to manage the state of the elevator and its door. The Elevator class can have a state variable that represents its current state (IDLE, MOVING, DOOR_OPEN), and the Door class can have a state variable that represents its current state (OPEN, CLOSED).
+The ElevatorController can use these states to determine how to handle requests and manage the operation of the elevators.
+
+ElevatorState (Idle, MovingUp, MovingDown)
+ -move()
+ -addRequest()
+ -getDirection()
+
+
+classes
+
+1. Elevator
+- id
+- currentFloor
+- direction (Direction)
+- isRunning (boolean)
+- upRequest(TreeSet<Integer>)
+- downRequest(TreeSet<Integer>)
+
+move() - This method will handle the movement of the elevator based on its current direction and requests.
+addRequest(Request) - This method will add a new request to the elevator's request queue based on the direction of the request.
+isRunning() - This method will return whether the elevator is currently running or idle.
+stopElevator() - This method will stop the elevator and set its state to IDLE.
+
+
+2. ElevetorSystem (singleTon)
+- elevators Map<Integer, Elevator> - This will hold all the elevators in the system, with their IDs as keys.
+- elevatorStrategy (ElevatorSelectionStrategy) - This will hold the strategy for selecting which elevator to use for a request.
+- executorService - This will manage the threads for the elevators, allowing them to run concurrently.
+
+methods:
+- requestElevator(int sourceFloor, int destinationFloor) - This method will handle a new elevator request, selecting the appropriate elevator based on the current state of the elevators and the request.
+- requestFloor(int elevatorId, int destinatonFloor) - This method will handle a request for an elevator from a specific floor, selecting the appropriate elevator based on the current state of the elevators and the request.
+- start() - This method will start the elevator system, initializing the elevators and starting their threads.
+- shutdown() - This method will shut down the elevator system, stopping all elevators and shutting down the executor service.
